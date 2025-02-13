@@ -2,6 +2,7 @@ import 'package:vgts_plugin_example/currency.dart';
 import 'package:vgts_plugin/form/base_object.dart';
 
 class Models {
+
   static T object<T extends BaseObject>() {
     switch (T) {
       case Currency:
@@ -9,4 +10,5 @@ class Models {
     }
     throw "Requested Model not initialised in Base Object";
   }
+
 }

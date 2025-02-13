@@ -18,6 +18,6 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    expect(await VgtsPlugin.platformVersion, '42');
+    expect(await VGTSPlugin, '42');
   });
 }
