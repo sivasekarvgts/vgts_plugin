@@ -56,11 +56,11 @@ class InputValidator {
     return null;
   }
 
-  static String? phoneValidator(String? value, { String? requiredText }) {
+  static String? phoneValidator(String? value, { String? requiredText ,}) {
     if (value?.trim()?.isEmpty != false)
       return requiredText ?? "Required !";
 
-    if (value!.length < 10)
+    if (value!.length < 6)
       return "Invalid Phone Number";
 
     return null;
