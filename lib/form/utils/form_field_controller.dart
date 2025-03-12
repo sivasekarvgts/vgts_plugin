@@ -95,13 +95,13 @@ class PhoneFormFieldController extends FormFieldController {
 
   String? requiredText;
 
-  PhoneFormFieldController(Key fieldKey, { int maxLength = 10, bool required = true, this.requiredText }) : super(fieldKey, maxLength: maxLength, required: required);
+  PhoneFormFieldController(Key fieldKey, { int maxLength = 10,  bool required = true, this.requiredText }) : super(fieldKey, maxLength: maxLength, required: required);
 
   @override
   List<TextInputFormatter> get inputFormatter => InputFormatter.phoneNoFormatter;
 
   @override
-  String? Function(String? p1)? get validator => !this.required ? null : (String? p1) => InputValidator.phoneValidator(p1, requiredText: requiredText);
+  String? Function(String? p1,)? get validator => !this.required ? null : (String? p1) => InputValidator.phoneValidator(p1, requiredText: requiredText,);
 
   @override
   TextInputType get textInputType => TextInputType.number;
